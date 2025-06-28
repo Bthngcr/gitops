@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ghcr.io/bthngcr/devops-case-app:712a03ba73905f857eaacf8088b7ff8a5a3c617f
+        image: ghcr.io/bthngcr/devops-case-app:4e49946060235809d0c09d2b7cc9f1c700cada8d
         ports:
         - containerPort: 5000
         resources:
