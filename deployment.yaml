@@ -20,7 +20,7 @@ spec:
         resources:
           requests:
             cpu: "100m"
-            memory: "128Mi"
+            memory: "128Mi"    # TODO cpu/mem değiştirisem ne olur nasıl update edebilirim?
           limits:
             cpu: "500m"
             memory: "512Mi"
@@ -38,16 +38,3 @@ spec:
           periodSeconds: 10
       imagePullSecrets:
       - name: ghcr-secret
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: devops-case-app
-spec:
-  selector:
-    app: devops-case-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 5000
-  type: LoadBalancer         
